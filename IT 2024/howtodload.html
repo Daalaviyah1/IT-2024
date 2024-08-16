@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PDF Download</title>
+  <style>
+    .pdf-link {
+      display: block;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .pdf-link:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Download PDF Files</h1>
+
+  <a href="#" class="pdf-link" id="pdf-download-link" download>Download PDF</a>
+
+  <script>
+    // Base64-encoded PDF file data
+    const pdfData = CSC-303  // Replace with your actual PDF file data
+
+    // Create a blob from the base64-encoded PDF data
+    const pdfBlob = new Blob([atob(pdfData)], { type: 'CSC-303/pdf' });
+
+    // Create a URL for the PDF blob
+    const pdfUrl = URL.createObjectURL(pdfBlob);
+
+    // Get the PDF download link element
+    const pdfDownloadLink = document.getElementById('pdf-download-link');
+
+    // Set the download link's href to the PDF URL
+    pdfDownloadLink.href = pdfUrl;
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PDF Download</title>
+  <style>
+    .pdf-dropdown {
+      display: block;
+      width: 200px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f1f1f1;
+      margin-bottom: 20px;
+    }
+
+    .pdf-link {
+      display: block;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .pdf-link:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Download PDF Files</h1>
+
+  <select class="pdf-dropdown" id="pdf-list">
+    <option value="">Select a PDF to download</option>
+    <option value="example1.pdf">Example PDF 1</option>
+    <option value="example2.pdf">Example PDF 2</option>
+    <option value="example3.pdf">Example PDF 3</option>
+  </select>
+
+  <a href="#" class="pdf-link" id="download-btn">Download</a>
+
+  <script>
+    const pdfList = document.getElementById('pdf-list');
+    const downloadBtn = document.getElementById('download-btn');
+
+    pdfList.addEventListener('change', function() {
+      const selectedPdf = this.value;
+      downloadBtn.href = selectedPdf;
+      downloadBtn.setAttribute('download', selectedPdf);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-image: url(./Background/BG.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif; */
+    /* background-color: red; */
+      
+}
+
+.Menu-bar{
+    background: white;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0 0 15px #000;  
+}
+.Menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
+.Menu-bar ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+    font-family: Arial;
+
+}
+
+.Menu-bar ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.Menu-bar ul li a:hover{
+    color: #fff;
+}
+
+.active, .Menu-bar ul li:hover{
+    background:rgba(168, 48, 4, 0.753);
+    border-radius: 3px;
+    color: #fff;
+}
+
+.Menu-bar .fa{
+    margin-right: 8px;
+}
+
+.sub-menu-1{
+    display: none;
+}
+.Menu-bar ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    background: rgba(160, 48, 4, 0.753);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.Menu-bar ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: 10px;
+}
+
+.Menu-bar ul li:hover .sub-menu-1 li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff ;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+
+}
+.Menu-bar ul li:hover .sub-menu-1 li:last-child{
+    border-bottom: none;
+}
+
+.Menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+    color:#fff ;
+}
+
+.fa-angle-right{
+    float: right
+}
+
+.sub-menu-2{
+    display: none;
+}
+
+.hover-me:hover .sub-menu-2{
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background: rgba(160, 48, 4, 0.753);    
+}
+
+/* .Down-Menu{
+    background-color:rgba(168, 48, 4, 0.753) ;
+    align-items: center;
+}
+.Down-Menu ul{
+    color: #fff; 
+}
+
+.Down-Menu ul li{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    justify-content: center;
+}
+
+.Down-Menu ul li a{
+    color: white;
+}
+
+#button-last ul li{
+    display: grid;
+} */
+.sub-menu-3{
+    display: none;
+}
+
+.Menu-bar ul li:hover .sub-menu-3{
+    display: block;
+    position: absolute;
+    background: rgba(160, 48, 4, 0.753);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.Menu-bar ul li:hover .sub-menu-3 ul{
+    display: block;
+    margin: 10px;
+}
+
+.Menu-bar ul li:hover .sub-menu-3 li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff ;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.Menu-bar ul li:hover .sub-menu-3 li:last-child{
+    border-bottom: none;
+}
+
+.Menu-bar ul li:hover .sub-menu-3 ul li a:hover{
+    color:#fff;
+}
+
+.sub-menu-4{
+    display: none;
+}
+
+.Menu-bar ul li:hover .sub-menu-4{
+    display: block;
+    position: absolute;
+    background: rgba(160, 48, 4, 0.753);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+.Menu-bar ul li:hover .sub-menu-4 ul{
+    display: block;
+    margin: 10px;
+}
+
+.Menu-bar ul li:hover .sub-menu-4 li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff ;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.Menu-bar ul li:hover .sub-menu-4 li:last-child{
+    border-bottom: none;
+}
+
+.Menu-bar ul li:hover .sub-menu-4 ul li a:hover{
+    color:#fff ;
+}
+.img-1{
+    width: 100px;
+    padding-left: -15px;
+    height: 100px;
+    margin-left: 5PX;
+}
+.Menu-bar ul .sooo{
+    text-align: center;
+    margin-top: 40px;
+    color: rgba(168, 48, 4, 0.753);
+    font-family: Arial;
+}
+
+/* Slider container*/
+.slider-container{ 
+    width: 100%; 
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    height: 80vh;
+    overflow: hidden;
+    margin-top: 2px;
+}
+
+/* Slide images */
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Next and previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}

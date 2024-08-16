@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Footer with Sub-menu</title>
+  <style>
+    /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-menu {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    .footer-menu li {
+      margin-right: 20px;
+      position: relative;
+    }
+
+    .footer-menu li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-menu li:hover .sub-menu {
+      display: block;
+    }
+
+    .sub-menu {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      width: 200px;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .sub-menu li {
+      margin-bottom: 10px;
+    }
+
+    .sub-menu li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .sub-menu li a:hover {
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <footer>
+        <div class="footer-container">
+        <div class="footer-logo">
+            <img src="logo.png" alt="Company Logo">
+        </div>
+        <nav>
+            <ul class="footer-menu">
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">Products</a>
+                <ul class="sub-menu">
+                <li><a href="#">Product 1</a></li>
+                <li><a href="#">Product 2</a></li>
+                <li><a href="#">Product 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        </div>
+  </footer>
+</body>
+</html>
